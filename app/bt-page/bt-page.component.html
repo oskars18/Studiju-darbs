@@ -1,0 +1,42 @@
+<ns-side-drawer>
+    <StackLayout>
+
+            <StackLayout orientation="horizontal">
+                <Label text="status: "></Label>
+                <Label width="30" height="30" [ngStyle]="{'background-color': bt.btColor }" background="red"></Label>
+            </StackLayout>
+            <StackLayout orientation = "horizontal">
+                <Button text="Connect" width="100" height="50" horizontalAlignment="left" (tap)="scanNConnect()"></Button>
+                <Button text="Disconnect" width="100" height="50" horizontalAlignment="left" (tap)="disconnectBT()"></Button>
+                <Button text="Test Send" width="100" height="50" horizontalAlignment="left" (tap)="sendBTData('Test succeeded')"></Button>
+            </StackLayout>
+            <StackLayout class="hr m-10"></StackLayout>
+
+            <StackLayout orientation="horizontal">
+                <Label text="Device name: "></Label>
+                <Label [text]="bt.btDeviceName"></Label> <!--Bluetooth device name-->
+            </StackLayout>
+            <StackLayout class="hr m-10"></StackLayout>
+
+            <StackLayout orientation="horizontal">
+                <Label text="Last received String: "></Label>
+                <Label text="None"></Label> <!--Bluetooth device name-->
+            </StackLayout>
+            <StackLayout class="hr m-10"></StackLayout>
+
+            <StackLayout orientation="horizontal">
+                <Label text="Last sent String: "></Label>
+                <Label [text]="bt.lastSentString"></Label> <!--Bluetooth device name-->
+            </StackLayout>
+
+            <!-- <Label [text]="tapped"></Label>
+            <Button text="bt-test works!" (tap)="checkBT()" class="-primary" ></Button>
+            <Label text="{{backParam}}"></Label> -->
+    </StackLayout>
+</ns-side-drawer>
+
+
+
+
+
+
