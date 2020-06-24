@@ -1,1 +1,1 @@
-# Studiju-darbs-
+# Studiju-darbs
